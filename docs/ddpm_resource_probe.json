@@ -1,0 +1,15 @@
+{
+  "probe": "Full-width 80D, batch32 DDPM, CPU bfloat16, two threads, eight requested steps",
+  "status": "Cancelled after more than 600 seconds without completing eight steps",
+  "only_own_probe_terminated": true,
+  "training_result_claimed": false,
+  "cpu_step_timing_unavailable": true,
+  "decision": "Do not run the full budget on CPU. Use the idle-GPU runner with a two-epoch measured pilot before continuing.",
+  "historical_gpu_20_epoch_seconds": [
+    652.0329739798326,
+    537.0572025661822,
+    527.9901151489466,
+    673.787396983942,
+    537.0569791030139
+  ]
+}

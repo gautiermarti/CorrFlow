@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible software or documentation issue.
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic inputs. Do not attach private data, credentials or source archives.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction and traceback
+      description: Paste the exact command or a small runnable example.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and environment
+      description: Git revision, Python, PyTorch, OS, CPU/GPU, seed and install command.
+    validations:
+      required: true

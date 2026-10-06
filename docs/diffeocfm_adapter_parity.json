@@ -1,0 +1,27 @@
+{
+  "scope": "synthetic component parity; excludes upstream training RNG/results",
+  "upstream_revision": "902282acd13a67784e2096d09ee93477b268c079",
+  "upstream_hashes": {
+    "diffeo.py": "43e21370085aa9630c3cf3f5e59164416430807f902b13ddf8569f387cd4da76",
+    "gaussian.py": "8c84061e26abeec64d57e29a454d7e41bf5c34c0dce2f8aea4a1e7318580c5c2",
+    "model.py": "1024f03c860e52d231863d3f1c6cce822cbc5012e482c2e241c248756c2b3ebe",
+    "LICENCE": "9cdcd6ab0442036aa61fb37d969bc327146080f96e2e2ddc22aecdf39375dfd8"
+  },
+  "script_sha256": "62caec28d4e0bf02dd8ef639c066eb4549728a6012399a48ff44a07fad32eb87",
+  "maximum_absolute_differences": {
+    "transformed_training": 1.9984014443252818e-15,
+    "class_means": 1.3183898417423734e-16,
+    "full_covariance_cholesky": 1.1102230246251565e-16,
+    "inverse": 4.440892098500626e-16,
+    "vector_field": 0.0,
+    "flow_loss": 0.0,
+    "parameter_gradients": 0.0
+  },
+  "versions": {
+    "torch": "2.13.0",
+    "torchcfm": "1.0.7",
+    "torchdiffeq": "0.2.5",
+    "pyriemann": "0.12",
+    "scikit-learn": "1.9.0"
+  }
+}

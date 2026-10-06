@@ -1,0 +1,19 @@
+protocol: abide_pcp_ho_site_holdout_v1_20261005
+model:
+  hidden_dim: 32
+  depth: 2
+  condition_dim: 2
+training:
+  epochs: 20
+  batch_size: 16
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  seed: 1701
+  validation_per_class: 30
+  validation_seed: 44301
+sampling:
+  steps: 25
+  batch_size: 16
+  precision: float32
+  inverse_tolerance: 0.00000001
+  inverse_max_iterations: 1000

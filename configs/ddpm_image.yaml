@@ -1,0 +1,14 @@
+model:
+  base_dim: 32
+  time_frequencies: 16
+diffusion:
+  timesteps: 1000
+training:
+  batch_size: 32
+  epochs: 20
+  learning_rate: 0.0002
+  weight_decay: 0.0001
+  gradient_clip: 1.0
+  ema_decay: 0.995
+  seed: 1701
+  precision: bfloat16

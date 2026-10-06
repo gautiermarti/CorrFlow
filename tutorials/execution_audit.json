@@ -1,0 +1,31 @@
+{
+  "python": "3.12.13",
+  "machine": "aarch64",
+  "scope": "Executed notebooks using installed CPU packages; no GPU or local source-path import",
+  "lessons": [
+    {
+      "lesson": "01_geometry.ipynb",
+      "execution": "passed",
+      "wall_seconds_including_kernel": 2.383522045100108,
+      "source_sha256": "3e172dddbc75069c32562fe6336e6e07f93074304b125ca6127c10e72141e6c8",
+      "notebook_sha256": "5d7bfde27f0e2866719117c2776a594e0e645169ceafdfa7780b37e962d7a0a0",
+      "executed_sha256": "3bfe93190b0bc0c705641031e5c62d852d7bbdb5b1677d14d59611ffa1dc7cf5"
+    },
+    {
+      "lesson": "02_generate.ipynb",
+      "execution": "passed",
+      "wall_seconds_including_kernel": 4.332382832886651,
+      "source_sha256": "23337d5d2ade1a338acb1999214976131023736db34465d9ae3ec1b269097e31",
+      "notebook_sha256": "bcd163faae1828e6d54070b602bf7f6a4eb11afc46861b0ff97c9ad5d662bdec",
+      "executed_sha256": "ce963081e9d59d17e02fba64365f1354168ad40e9738f6fca9cc5024dca0a9f6"
+    },
+    {
+      "lesson": "03_reproduce_table.ipynb",
+      "execution": "passed",
+      "wall_seconds_including_kernel": 0.7390350508503616,
+      "source_sha256": "01a40cf409ee0bf70112862b1c1e93da41c7b3d975980a27ae5d60a8ef7848fe",
+      "notebook_sha256": "e8987e0806fdc78b5e25ff870de6741077f1ecbb3d8f12af3493a85a85c845aa",
+      "executed_sha256": "c74216e74a7cb81106898f74a8d5a257948a7c9b332bc2e645864ee808e741a2"
+    }
+  ]
+}

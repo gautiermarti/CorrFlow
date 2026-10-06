@@ -1,0 +1,19 @@
+{
+  "name": "Synthetic 6D GFT teaching mixture",
+  "license": "CC0-1.0",
+  "scope": "Independent synthetic draws; no market or participant data; no empirical paper claim",
+  "construction": "15 independent Normal(class_mean, .10^2) GFT coordinates; means [-.08, .10, .30]",
+  "split_seeds": {
+    "train": 3101,
+    "validation": 3102,
+    "test": 3103
+  },
+  "sha256": {
+    "gft/test.npz": "d80abdf74780067c472942e6180ea8e4e29c86a6c0f3f5ee4e05b2fe92e8c683",
+    "gft/train.npz": "2e4558ec3754aab1cc147f245bad0fc22c2359f9fc9143ad7733f1b041500478",
+    "gft/validation.npz": "71bc5da324133b1a97c9b62808c535b0fcdc0543442d6d881f316ae1fc4af136",
+    "test.npz": "5133f7d0666a85f3b38b09816d21c5abfbb7fbf25c5027206efbc6f85a551991",
+    "train.npz": "33542b954335e933f7cb24d4e97da4b9ab7df7caa51e9ee25803fcdd27d21995",
+    "validation.npz": "128672f875249045e1c2657723b2c3dbcbd96f443118c43b42e9e197eea4f74c"
+  }
+}

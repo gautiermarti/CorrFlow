@@ -1,0 +1,64 @@
+name: CPU validation
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cpu-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.12', '3.13']
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: |
+            pyproject.toml
+            requirements-benchmark.txt
+      - name: Install CPU dependencies and lint
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r requirements-benchmark.txt '.[dev,diffeocfm,notebooks]' twine
+          ruff check .
+      - name: Build and check distributions
+        run: |
+          python -m build
+          python -m twine check --strict dist/*
+      - name: Install and test wheel
+        run: |
+          python -m pip install --force-reinstall --no-deps dist/*.whl
+          python -m pip check
+          cd "$RUNNER_TEMP"
+          python -m pytest --import-mode=importlib \
+            -c "$GITHUB_WORKSPACE/pyproject.toml" "$GITHUB_WORKSPACE/tests" -q
+      - name: Install and test source archive
+        run: |
+          python -m pip install --force-reinstall --no-deps dist/*.tar.gz
+          python -m pip check
+          cd "$RUNNER_TEMP"
+          python -m pytest --import-mode=importlib \
+            -c "$GITHUB_WORKSPACE/pyproject.toml" "$GITHUB_WORKSPACE/tests" -q
+      - name: Run examples with installed package
+        run: |
+          python examples/generate_and_validate.py
+          python examples/node_relabeling.py
+          python tutorials/01_geometry.py
+          python tutorials/02_generate.py
+          python tutorials/03_reproduce_table.py

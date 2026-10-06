@@ -1,0 +1,24 @@
+name: Reproduction report
+description: Report a tutorial, sampling or scientific reproduction attempt.
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: What did you run?
+      description: Distinguish installation, tutorial, table aggregation, sampling and retraining.
+    validations:
+      required: true
+  - type: textarea
+    id: versions
+    attributes:
+      label: Exact code, data and environment versions
+      description: Include public hashes and protocol IDs; do not upload restricted data.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Outcome, commands and deviations
+      description: Include negative results, missing files and any changes to the protocol.
+    validations:
+      required: true

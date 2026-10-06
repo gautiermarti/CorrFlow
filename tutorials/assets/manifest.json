@@ -1,0 +1,18 @@
+{
+  "scope": "Synthetic teaching checkpoint/data and audited numerical paper report; no financial matrices distributed",
+  "licenses": {
+    "toy_data": "CC0-1.0",
+    "toy_checkpoint": "MIT",
+    "tutorial_code": "MIT"
+  },
+  "sha256": {
+    "toy_corrflow.pt": "1e0777905324f17ea0caad4608310e8ecb6ccdac38b6da4734a7f15790390f6d",
+    "toy_training_history.json": "cd878df69b5c93cf5bc8621fff796025c3bcf1361be36bb9aeb97cdc29f78c59",
+    "toy_data_manifest.json": "a5ff0b419e35aba33eb2e6b77a36785768454a0dabf875467a40aead486fa513",
+    "matched_taiwan_results.json": "a56b61d5100076b930623e2ac8bbe557a878d4ce6920cf098eebe6068aab2d0e",
+    "train.npz": "33542b954335e933f7cb24d4e97da4b9ab7df7caa51e9ee25803fcdd27d21995",
+    "validation.npz": "128672f875249045e1c2657723b2c3dbcbd96f443118c43b42e9e197eea4f74c",
+    "test.npz": "5133f7d0666a85f3b38b09816d21c5abfbb7fbf25c5027206efbc6f85a551991"
+  },
+  "training_config_sha256": "e576dbcff74f5a514b957668c53e5fb8f1efa7e310ff1126be1a82429b0f0941"
+}

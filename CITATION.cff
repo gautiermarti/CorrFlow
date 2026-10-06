@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite the exact release used for your experiments."
+title: "corrflow"
+authors:
+  - family-names: Marti
+    given-names: Gautier
+type: software
+version: 0.1.0rc2
+license: MIT
+repository-code: "https://github.com/gautiermarti/corrflow"

@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corrflow"
+version = "0.1.0rc2"
+description = "Exact and permutation-equivariant correlation generation"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Gautier Marti"}]
+keywords = ["correlation-matrices", "generative-models", "reproducible-research"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["corrbench==0.1.0rc2", "numpy>=2.0", "pyyaml>=6.0", "torch>=2.6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.11", "build"]
+diffeocfm = ["torchdiffeq>=0.2.5"]
+notebooks = ["nbformat", "nbclient", "ipykernel"]
+
+[project.urls]
+Repository = "https://github.com/gautiermarti/corrflow"
+Issues = "https://github.com/gautiermarti/corrflow/issues"
+Documentation = "https://github.com/gautiermarti/corrflow#readme"
+Changelog = "https://github.com/gautiermarti/corrflow/blob/main/CHANGELOG.md"
+
+[project.scripts]
+corrflow-train = "corrflow.cli.train_flow:main"
+corrflow-sample = "corrflow.cli.sample_flow:main"
+corrflow-evaluate = "corrflow.cli.evaluate_flow:main"
+corrflow-train-diffusion = "corrflow.cli.train_corrdiffusion:main"
+corrflow-train-image-ddpm = "corrflow.cli.train_ddpm:main"
+corrflow-sample-image-ddpm = "corrflow.cli.sample_ddpm:main"
+corrflow-benchmark-scaling = "corrflow.cli.benchmark_scaling:main"
+corrflow-train-diffeocfm = "corrflow.cli.train_diffeocfm:main"
+corrflow-sample-diffeocfm = "corrflow.cli.sample_diffeocfm:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

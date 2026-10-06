@@ -1,0 +1,2 @@
+# Exact compatible public-export snapshot.
+corrbench @ git+https://github.com/gautiermarti/corrbench.git@3366a31a93fcbf3310de62bb7b4bd33a7af69a2c

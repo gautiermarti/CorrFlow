@@ -1,0 +1,43 @@
+{
+  "audit_schema": "corrflow.image-ddpm-native-audit.v1",
+  "completed_epochs": 3,
+  "training_seed": 1701,
+  "native_validation_checks": [
+    {
+      "budget": 1,
+      "choice": "best",
+      "epoch": 1,
+      "validation_loss": 1.0439902544021606,
+      "native_exact": true,
+      "checkpoint_sha256": "e9f08e0ec21da4d9fb8498e04acd0c0160c842f9cc025be3172f3d282902167a"
+    },
+    {
+      "budget": 1,
+      "choice": "last",
+      "epoch": 1,
+      "validation_loss": 1.0439902544021606,
+      "native_exact": true,
+      "checkpoint_sha256": "0a704eb49298e5f0c83ce4b5a6850c3681227d5364f69910b8f253071f34bde1"
+    },
+    {
+      "budget": 3,
+      "choice": "best",
+      "epoch": 3,
+      "validation_loss": 0.9853835701942444,
+      "native_exact": true,
+      "checkpoint_sha256": "f65d94dc9da6d151d1d77f4965c0d0ba0b1a933d550a236b718363bdc20816a2"
+    },
+    {
+      "budget": 3,
+      "choice": "last",
+      "epoch": 3,
+      "validation_loss": 0.9853835701942444,
+      "native_exact": true,
+      "checkpoint_sha256": "673eba33654367281e44037e09fb0baadbf6cf850d1fbc4d74f948bcd2e3f629"
+    }
+  ],
+  "validation_rng_exact": true,
+  "test_data_read": false,
+  "training_state_sha256": "cfd4e16710bb324ca5ebde31c9b38ed1fad3597ed4045b040482e02f0dcd605b",
+  "auditor_sha256": "07d58f23a84a8927fa713f65068103f46fe57fa65036b3f076672984b5ef099e"
+}

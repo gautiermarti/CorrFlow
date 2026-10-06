@@ -1,0 +1,14 @@
+include CITATION.cff requirements*.txt THIRD_PARTY_NOTICES.md
+recursive-include configs *.yaml *.yml
+recursive-include docs *.md *.json *.png
+recursive-include examples *.py
+recursive-include research *.py *.json
+recursive-include tutorials *.py *.md *.yaml *.json *.ipynb *.npz *.pt
+recursive-include tests *.py
+global-exclude __pycache__ *.pyc
+
+include CONTRIBUTING.md SECURITY.md CHANGELOG.md
+recursive-include .github *.yml *.md
+
+include CONTRIBUTING.md RELEASE_STATUS.md EXPORT_MANIFEST.json
+recursive-include .github *.yml

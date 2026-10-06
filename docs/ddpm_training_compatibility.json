@@ -1,0 +1,14 @@
+{
+  "scope": "Three-epoch 8D CPU trajectory parity against previous trainer, not historical 80D CUDA reproduction",
+  "legacy_revision": "81822a4",
+  "legacy_trainer_sha256": "ddb9989307b8c2eec64ce7bf915eccbc8b9780ae19976afd247f7635c281b1ea",
+  "current_trainer_sha256": "e57737dcc0c3dc6bf23d524b5953501e15db1e5b96a73710ec8c19a51b882e4b",
+  "raw_and_ema_parameters_exact": true,
+  "all_training_and_validation_losses_exact": true,
+  "selected_epoch": 3,
+  "torch": "2.14.1+cpu",
+  "data_sha256": {
+    "validation.npz": "71efa4079694bda564785226eb46b210004c31deabadb992c451e70c7b99d9e8",
+    "train.npz": "503b56983d60aa705b88503cb5d5695062394083d60fbe55adf2da861ca3aa9c"
+  }
+}

@@ -1,0 +1,24 @@
+protocol: synthetic_teaching_mixture_v1
+conditioning: categorical_only
+model:
+  hidden_dim: 16
+  depth: 2
+  time_frequencies: 8
+training:
+  batch_size: 60
+  epochs: 40
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip: 1.0
+  ema_decay: 0.995
+  seed: 3104
+  precision: float32
+  structural_validation_every: 5
+  validation_per_class: 20
+  validation_seed: 3105
+sampling:
+  batch_size: 30
+  steps: 20
+  precision: float32
+  inverse_tolerance: 0.00000001
+  inverse_max_iterations: 1000

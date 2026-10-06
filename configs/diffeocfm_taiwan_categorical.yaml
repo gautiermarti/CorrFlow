@@ -1,0 +1,16 @@
+protocol: taiwan_categorical_validation_v1
+conditioning: categorical_only
+model:
+  hidden: [512]
+training:
+  batch_size: 64
+  epochs: 200
+  learning_rate: 0.001
+  seed: 1701
+  structural_validation_every: 10
+  validation_per_class: 100
+  validation_seed: 44301
+sampling:
+  batch_size: 64
+  atol: 0.00001
+  rtol: 0.00001
