@@ -1,5 +1,7 @@
 # CorrFlow
 
+<img src="docs/assets/corrflow-logo.png" alt="CorrFlow logo: correlation elliptope with distribution transport" width="180" align="right">
+
 Geometry-aware flow matching for positive-definite correlation matrices.
 Research software · **0.1.0rc2**.
 
