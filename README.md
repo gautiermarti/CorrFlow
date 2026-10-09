@@ -105,6 +105,9 @@ remains unestablished.
 
 ![Matched categorical comparison with coverage and portfolio diagnostics](docs/figures/matched_taiwan.png)
 
+Portfolio SWD uses a logarithmic axis: dots show the five seeds and diamonds
+show their means. The other panels retain linear axes and mean ± seed SD.
+
 The repository also supports a node-identity extension and anonymous-node
 ablation for ABIDE, plus the categorical weather pilot. The initial brain
 augmentation experiment establishes no gain over real-only training. The weather
